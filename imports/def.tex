@@ -1,0 +1,69 @@
+%!TEX root = ../document.tex
+\documentclass[oneside,11pt,DIV=8,headings=openright,listof=totoc]{scrreprt}
+\usepackage{scrhack}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{setspace}
+\usepackage{microtype}
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{blindtext}
+\usepackage{amsmath}
+\usepackage{lmodern}% sans serif
+\usepackage[scaled=.98,sups,osf]{XCharter}% lining figures in math, osf in text
+\usepackage[scaled=1.04,varqu,varl]{inconsolata}% inconsolata typewriter
+\usepackage{graphicx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%bib
+\usepackage[backend=biber,style=alphabetic,hyperref=true,backref=true,block=none,maxcitenames=3,maxbibnames=100]{biblatex}
+\addbibresource{imports/references.bib}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% colors
+\definecolor{THI-Blue}{RGB}{1,90,156}
+\colorlet{BLACK}{black}
+\colorlet{documentColor}{THI-Blue}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section font settings
+\addtokomafont{chapter}{\leavevmode\color{documentColor}}
+\addtokomafont{section}{\leavevmode\color{documentColor}}
+\addtokomafont{title}{\leavevmode\color{documentColor}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{url}
+\usepackage{csquotes}
+
+\setlength{\emergencystretch}{0.5em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header
+\usepackage[automark]{scrlayer-scrpage}
+\pagestyle{headings}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% begin of the document
+\usepackage{eso-pic}
+\AtBeginDocument{
+\newcommand\BackgroundPic{%
+\put(220,-180){%
+\parbox[b][\paperheight]{\paperwidth}{%
+\vfill
+\includegraphics[width=0.3\paperwidth]{imports/thi_logo.eps}
+\vfill
+}}}
+\AddToShipoutPicture*{\BackgroundPic}
+\maketitle
+\clearpage
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage[hidelinks]{hyperref}
