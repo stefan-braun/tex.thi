@@ -9,7 +9,7 @@
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage{blindtext}
 \usepackage{amsmath}
-\usepackage{lmodern}% sans serif
+\usepackage{firasans}% sans serif
 \usepackage[scaled=.98,sups,osf]{XCharter}% lining figures in math, osf in text
 \usepackage[scaled=1.04,varqu,varl]{inconsolata}% inconsolata typewriter
 \usepackage{graphicx}
@@ -33,7 +33,12 @@
 % Section font settings
 \addtokomafont{chapter}{\leavevmode\color{documentColor}}
 \addtokomafont{section}{\leavevmode\color{documentColor}}
-\addtokomafont{title}{\leavevmode\color{documentColor}}
+\addtokomafont{title}{\mdseries\Huge\leavevmode\color{documentColor}}
+\addtokomafont{author}{\sffamily\color{black!70}}
+\addtokomafont{date}{\sffamily\color{black!70}}
+\addtokomafont{subtitle}{\Large}
+\addtokomafont{subject}{\sffamily\mdseries\color{black!70}\lsstyle}
+\addtokomafont{disposition}{\mdseries}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -53,12 +58,19 @@
 \usepackage{eso-pic}
 \AtBeginDocument{
 \newcommand\BackgroundPic{%
-\put(220,-180){%
+\put(220,-120){%
 \parbox[b][\paperheight]{\paperwidth}{%
 \vfill
 \includegraphics[width=0.3\paperwidth]{imports/thi_logo.eps}
 \vfill
-}}}
+}}
+% \put(220,-180){%
+\parbox[b][\paperheight]{\paperwidth}{%
+\vfill
+\includegraphics[width=0.95\paperwidth]{imports/thi_ei.png}
+\hfill
+% }
+}}
 \AddToShipoutPicture*{\BackgroundPic}
 \maketitle
 \clearpage
