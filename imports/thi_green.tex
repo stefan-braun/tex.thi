@@ -1,0 +1,18 @@
+\documentclass{standalone}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{calc}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning,shapes.misc}
+\definecolor{left} {HTML}{001528}
+
+\begin{document}
+
+\includegraphics[width=\paperwidth]{thi_ei.png}
+\begin{tikzpicture}[remember picture, overlay]
+	\draw[shading = axis,rectangle, left color=left, right color=left!30!white,shading angle=135,fill=black, fill opacity=0.2,rotate around={-13.2:(-1.2\paperwidth,10cm)},rounded corners=15pt,draw=none] ($(-1.2\paperwidth,10cm)$) rectangle (0.1,0);
+	\draw[fill=black, fill opacity=0.2,rotate around={-20:(-1.2\paperwidth,13.2cm)},rounded corners=15pt,draw=none] ($(-1.2\paperwidth,13.2cm)$) rectangle (-13.14cm,0);
+\end{tikzpicture}
+\end{document}

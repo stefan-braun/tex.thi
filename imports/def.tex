@@ -9,7 +9,7 @@
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage{blindtext}
 \usepackage{amsmath}
-\usepackage{firasans}% sans serif
+\usepackage{FiraSans}% sans serif
 \usepackage[scaled=.98,sups,osf]{XCharter}% lining figures in math, osf in text
 \usepackage[scaled=1.04,varqu,varl]{inconsolata}% inconsolata typewriter
 \usepackage{graphicx}
@@ -58,10 +58,13 @@
 \usepackage{eso-pic}
 \AtBeginDocument{
 \newcommand\BackgroundPic{%
-\put(220,-120){%
+\put(0,-120){%
 \parbox[b][\paperheight]{\paperwidth}{%
 \vfill
-\includegraphics[width=0.3\paperwidth]{imports/thi_logo.eps}
+\centering
+\includegraphics[width=4cm]{imports/thi_logo.eps}
+\\[0.5cm]
+\includegraphics[width=4cm]{imports/sulzer.png}
 \vfill
 }}
 % \put(220,-180){%
@@ -76,6 +79,5 @@
 \clearpage
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \usepackage[hidelinks]{hyperref}
